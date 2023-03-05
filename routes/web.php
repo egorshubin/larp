@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DuckController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/duck/{id}', [DuckController::class, 'show']);
+
+Route::get('/duck', [DuckController::class, 'create']);
+
+Route::post('/duck', [DuckController::class, 'store']);
+
+Route::put('/duck/{id}', [DuckController::class, 'update']);

@@ -5,9 +5,15 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Welcome</title>
+    <title>Create duck</title>
 </head>
 <body>
-<a href="/duck">Create duck</a>
+    <h1>Create Duck</h1>
+
+    <form action="/duck" method="post">
+        @csrf
+        <input type="text" name="color">
+        <input type="submit" value="Save">
+    </form>
 </body>
 </html>
